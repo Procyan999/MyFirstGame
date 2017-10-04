@@ -3,22 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
-    private Rigidbody rb;
-    public float speed;
-    // Use this for initialization
-     void FixedUpdate() {
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        
-        Vector2 movement = new Vector2(moveHorizontal, 2.0f);
-        rb.AddForce(movement * 5);
+    public float jump = 10.0f;
+    Rigidbody2D rb;
+    private void Start()
+    {
+        rb = transform.GetComponent<Rigidbody2D>();
     }
-
-    void Start () {
-        rb = GetComponent<Rigidbody>();
+    private void FixedUpdate()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            rb.AddForce(Vector3.up * (jump * rb.mass * rb.gravityScale * 20.0f));
+        }
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }
