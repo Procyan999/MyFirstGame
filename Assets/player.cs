@@ -1,0 +1,38 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class player : MonoBehaviour {
+    private Rigidbody2D rb;
+    private GameObject cool;
+    // Use this for initialization
+	void Start () {
+        rb = GetComponent<Rigidbody2D>();
+        cool = GameObject.FindGameObjectWithTag("a");
+    }
+	
+	// Update is called once per frame
+	void Update () {
+      
+	}
+    private void FixedUpdate()
+    {
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            Vector2 ho = new Vector2(0.0f, 20.0f);
+            rb.AddForce(ho * 10);
+        }
+
+        float yes = Input.GetAxis("Horizontal");
+        Vector2 wow = new Vector2(yes, 0.0f);
+        rb.AddForce(wow * 10);
+    }
+    private void OnCollisionEnter(Collision col)
+    {
+        if (col.gameObject.name == "a")
+        {
+            Destroy(this.gameObject);
+        }
+
+    }
+}
