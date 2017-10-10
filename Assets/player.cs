@@ -8,7 +8,6 @@ public class player : MonoBehaviour {
     // Use this for initialization
 	void Start () {
         rb = GetComponent<Rigidbody2D>();
-        cool = GameObject.FindGameObjectWithTag("a");
     }
 	
 	// Update is called once per frame
@@ -26,13 +25,5 @@ public class player : MonoBehaviour {
         float yes = Input.GetAxis("Horizontal");
         Vector2 wow = new Vector2(yes, 0.0f);
         rb.AddForce(wow * 10);
-    }
-    private void OnCollisionEnter(Collision col)
-    {
-        if (col.gameObject.name == "a")
-        {
-            Destroy(this.gameObject);
-        }
-
     }
 }
