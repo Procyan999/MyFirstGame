@@ -296,7 +296,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 927214049}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.232, y: 1.14, z: 0}
+  m_LocalPosition: {x: 0.232, y: 1.62, z: 0}
   m_LocalScale: {x: 27.739964, y: 1.1000004, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -402,7 +402,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1769785440}
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 3.08, y: 3.03, z: -1.16}
+  m_LocalPosition: {x: 0.85, y: 1.82, z: -4.12}
   m_LocalScale: {x: 1.0852195, y: 1.0852189, z: 1.0852189}
   m_Children: []
   m_Father: {fileID: 0}
@@ -582,6 +582,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 03d2349c56eab5e4dbbc0d40f1c9aa92, type: 2}
+    - target: {fileID: 1860190301948444, guid: bb6ac891d7ece844aaf5a0c900e27c5d, type: 2}
+      propertyPath: m_TagString
+      value: Spike
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bb6ac891d7ece844aaf5a0c900e27c5d, type: 2}
   m_IsPrefabParent: 0
@@ -594,6 +598,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2088156806}
   - component: {fileID: 2088156805}
+  - component: {fileID: 2088156807}
   - component: {fileID: 2088156804}
   - component: {fileID: 2088156803}
   - component: {fileID: 2088156802}
@@ -668,9 +673,23 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2088156801}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: -0.74, z: -10}
   m_LocalScale: {x: 41.083202, y: 1.8874995, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2088156807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2088156801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62ce3f229787e0f43a3607eec2e601d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  smoothTimeY: 2
+  smoothTimeX: 0.05
+  player: {fileID: 1881756392}

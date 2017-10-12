@@ -26,4 +26,11 @@ public class player : MonoBehaviour {
         Vector2 wow = new Vector2(yes, 0.0f);
         rb.AddForce(wow * 10);
     }
-}
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.CompareTag("Spike"))
+        {
+            Destroy(this.gameObject);
+        }
+    }
+    }
