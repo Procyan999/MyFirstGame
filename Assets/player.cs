@@ -31,6 +31,11 @@ public class player : MonoBehaviour {
         if (col.gameObject.CompareTag("Spike"))
         {
             Destroy(this.gameObject);
+            Die();
         }
     }
+public void Die()
+    {
+        Application.LoadLevel(Application.loadedLevel);
     }
+}
