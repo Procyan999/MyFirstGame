@@ -6,6 +6,7 @@ TagManager:
   tags:
   - a
   - Spike
+  - b
   layers:
   - Default
   - TransparentFX
