@@ -11,9 +11,9 @@ public class player : MonoBehaviour {
         rb = GetComponent<Rigidbody2D>();
     }
     // Update is called once per frame
-    void Update () {
-      
-	}
+    void Update() {
+
+    }
     private void FixedUpdate()
     {
         if (Input.GetKeyDown(KeyCode.UpArrow))
@@ -33,8 +33,16 @@ public class player : MonoBehaviour {
             Destroy(this.gameObject);
             Die();
         }
+        if (col.CompareTag("point"))
+        {
+            count++;
+            setCountText();
+        }
     }
-public void Die()
+    void setCountText(){
+        countText.text = "Count:" + count.ToString;
+    }
+    public void Die()
     {
         Application.LoadLevel(Application.loadedLevel);
     }
