@@ -6,12 +6,13 @@ public class player : MonoBehaviour {
     private Rigidbody2D rb;
     public int count;
     public Text countText;
-  
+    private GameMaster gm;
     // Use this for initialization
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-    
+        gm = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameMaster>();
+
     }
     // Update is called once per frame
     void Update() {
@@ -53,19 +54,15 @@ public class player : MonoBehaviour {
             Destroy(this.gameObject);
             Die();
         }
-
+        if (col.CompareTag("point"))
+        {
+            Destroy(col.gameObject);
+            gm.points += 1;
+        }
     }
     public void Die()
     {
         Application.LoadLevel(Application.loadedLevel);
-    }
-private void onTriggerEnter2D(Collider2D col)
-    {
-        if (col.CompareTag("point"))
-        {
-          Destroy(col.gameObject);
-          
-        }
     }
 
 }
