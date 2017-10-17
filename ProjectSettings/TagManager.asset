@@ -8,6 +8,8 @@ TagManager:
   - Spike
   - b
   - point
+  - yes
+  - GameMaster
   layers:
   - Default
   - TransparentFX
