@@ -2121,6 +2121,10 @@ Prefab:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 1243094283529290, guid: 6366e25d044501d4e88d1bd36080dd0e, type: 2}
+      propertyPath: m_TagString
+      value: point
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6366e25d044501d4e88d1bd36080dd0e, type: 2}
   m_IsPrefabParent: 0
