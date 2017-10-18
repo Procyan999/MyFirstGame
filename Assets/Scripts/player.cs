@@ -54,7 +54,7 @@ public class player : MonoBehaviour {
             Destroy(this.gameObject);
             Die();
         }
-        if (col.CompareTag("point"))
+       if (col.CompareTag("point"))
         {
             Destroy(col.gameObject);
             gm.points += 1;
